@@ -2,8 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  ul 
+  p.list  Welcome to #{title}
+  
+  ul.list
     each value in data 
       li= value.blog_txt 
   br

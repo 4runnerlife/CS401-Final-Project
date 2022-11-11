@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.list{
+  font: 50px;
+  color: blueviolet;
+}
 a {
   color: #00B7FF;
 }
