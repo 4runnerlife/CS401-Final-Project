@@ -10,3 +10,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.test{
+  border: solid 2px blue;
+  font: 50pt;
+  color: darkgreen;
+  position: fixed;
+  left: 30%;
+}
