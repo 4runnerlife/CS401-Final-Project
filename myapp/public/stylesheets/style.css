@@ -1,11 +1,26 @@
 body {
+  display: grid;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: darkseagreen;
+   grid-template-columns: 150px auto 150px;
+   grid-template-rows: 60px 180px 75px;
+   grid-template-areas: 
+      "head head head"
+      "nav article article"
+      "foot article article"; 
 }
-
+h1{
+  border: solid 2px red;
+  font: 50pt;
+  grid-area: head;
+}
 .list{
+  border: solid 2px yellow;
   font: 50px;
   color: blueviolet;
+  grid-area: nav;
+ 
 }
 a {
   color: #00B7FF;
@@ -15,6 +30,6 @@ a {
   border: solid 2px blue;
   font: 50pt;
   color: darkgreen;
-  position: fixed;
-  left: 30%;
+  grid-area: article;
+  
 }
