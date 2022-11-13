@@ -1,20 +1,25 @@
 body {
   display: grid;
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: darkseagreen;
    grid-template-columns: 20% auto auto;
-   grid-template-rows: 100px 480px 140px;
+   grid-template-rows: 100px 480px 160px;
    grid-template-areas: 
       "head head head"
       "nav article article"
-      "foot foot foot"; 
+      "foot article article"; 
 }
 h1{
   text-align: center;
   border: solid 2px red;
   font: 50pt;
   grid-area: head;
+}
+.topBlog{
+  background-color: #04AA6D;
+  width: 100%;
+  color: white;
 }
 .list{
   border: solid 2px yellow;
