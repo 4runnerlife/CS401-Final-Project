@@ -9,13 +9,14 @@ block content
     each value in data 
       li= value.blog_txt 
   br
-  form(action='/add', method='POST')
-    input(type='text', name='blog_txt', value="")
-    button(type='submit')
-      p Add
-  form(action='/delete', method='POST')
-    input(type='text', name='blog_id', value="")
-    button(type='submit')
-      p Delete
-
+  .article 
+    form(action='/add', method='POST')
+      input(type='text', name='blog_txt', value="")
+      button(type='submit')
+        p Add
+    form(action='/delete', method='POST')
+      input(type='text', name='blog_id', value="")
+      button(type='submit')
+        p Delete
+  
   div.test hey there 

@@ -3,12 +3,12 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: darkseagreen;
-   grid-template-columns: 150px auto 150px;
-   grid-template-rows: 60px 180px 75px;
+   grid-template-columns: 20% auto auto;
+   grid-template-rows: 100px 480px 140px;
    grid-template-areas: 
       "head head head"
       "nav article article"
-      "foot article article"; 
+      "foot foot foot"; 
 }
 h1{
   text-align: center;
@@ -26,7 +26,11 @@ h1{
 a {
   color: #00B7FF;
 }
-
+.article{
+  border: solid 2px black;
+  font: 50px;
+  grid-area: foot;
+}
 .test{
   border: solid 2px blue;
   font: 50pt;
