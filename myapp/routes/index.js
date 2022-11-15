@@ -76,5 +76,21 @@ router.post('/delete', (req, res, next) => {
   );
 })
 
+router.post('/edit', (req, res, next) => {
+  console.log("edited");
+  let db = new sqlite3.Database('mydb.sqlite3',
+    sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    (err) => {
+      if (err) {
+        console.log("Getting error " + err);
+        exit(1);
+      }
+      console.log("edited " + req.body.blog_id);
+ 
+      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`);     
+      res.redirect('/');
+    }
+  );
+})
 
 module.exports = router;
