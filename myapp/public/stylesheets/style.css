@@ -8,7 +8,7 @@ body {
    grid-template-areas: 
       "head head head"
       "nav article article"
-      "foot article article"; 
+      "foot foot foot"; 
 }
 h1{
   text-align: center;
@@ -35,6 +35,7 @@ a {
   border: solid 2px black;
   font: 50px;
   grid-area: foot;
+  
 }
 .test{
   border: solid 2px blue;
