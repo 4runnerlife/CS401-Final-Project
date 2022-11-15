@@ -52,7 +52,7 @@ router.post('/add', (req, res, next) => {
       console.log("inserting " + req.body.blog_txt);
     
       db.exec(`insert into blog (blog_txt, blog_body)
-                values ('${req.body.blog_txt}', 'hello');`)
+                values ('${req.body.blog_txt}', '${req.body.blog_body}');`)
       //redirect to homepage
       res.redirect('/');
     }
@@ -87,7 +87,8 @@ router.post('/edit', (req, res, next) => {
       }
       console.log("edited " + req.body.blog_id);
  
-      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`);     
+      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`); 
+          
       res.redirect('/');
     }
   );
