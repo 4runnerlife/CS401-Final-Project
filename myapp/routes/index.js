@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
         exit(1);
       }
       //Query if the table exists if not lets create it on the fly!
-      db.all('DROP table blog')
+      // db.all('DROP table blog')
       db.all(`SELECT name FROM sqlite_master WHERE type='table' AND name='blog'`,
         (err, rows) => {
           if (rows.length === 1) {
@@ -51,8 +51,8 @@ router.post('/add', (req, res, next) => {
       }
       console.log("inserting " + req.body.blog_txt);
     
-      db.exec(`insert into blog (blog_txt)
-                values ('${req.body.blog_txt}');`)
+      db.exec(`insert into blog (blog_txt, blog_body)
+                values ('${req.body.blog_txt}', 'hello');`)
       //redirect to homepage
       res.redirect('/');
     }
@@ -68,7 +68,7 @@ router.post('/delete', (req, res, next) => {
         console.log("Getting error " + err);
         exit(1);
       }
-      console.log("inserting " + req.body.blog_id);
+      console.log("deleted " + req.body.blog_id);
  
       db.exec(`delete from blog where blog_id='${req.body.blog_id}';`);     
       res.redirect('/');
