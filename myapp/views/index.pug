@@ -25,6 +25,11 @@ block content
       input(type='text', name='blog_body', value="")
       button(type='submit')
         p Edit
+    form(action='/update', method='POST')
+      input(type='text', name='blog_txt', value="")
+      input(type='text', name='blog_body', value="")
+      button(type='submit')
+        p Update 
 
   div.test hey there 
     ul

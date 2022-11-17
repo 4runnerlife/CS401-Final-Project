@@ -4,7 +4,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: darkseagreen;
    grid-template-columns: 20% auto auto;
-   grid-template-rows: 100px 480px 160px;
+   grid-template-rows: 100px 480px 200px;
    grid-template-areas: 
       "head head head"
       "nav article article"

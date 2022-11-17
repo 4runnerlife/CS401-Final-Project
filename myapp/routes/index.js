@@ -49,7 +49,7 @@ router.post('/add', (req, res, next) => {
         console.log("Getting error " + err);
         exit(1);
       }
-      console.log("inserting " + req.body.blog_txt);
+      console.log("adding " + req.body.blog_txt);
     
       db.exec(`insert into blog (blog_txt, blog_body)
                 values ('${req.body.blog_txt}', '${req.body.blog_body}');`)
@@ -86,6 +86,24 @@ router.post('/edit', (req, res, next) => {
         exit(1);
       }
       console.log("edited " + req.body.blog_id);
+ 
+      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`); 
+      
+      res.redirect('/');
+    }
+  );
+})
+
+router.post('/update', (req, res, next) => {
+  console.log("updated");
+  let db = new sqlite3.Database('mydb.sqlite3',
+    sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    (err) => {
+      if (err) {
+        console.log("Getting error " + err);
+        exit(1);
+      }
+      console.log("updated " + req.body.blog_id);
  
       db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`); 
       
