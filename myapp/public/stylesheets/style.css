@@ -22,8 +22,14 @@ h1{
   color: white;
 }
 .list{
-  border: solid 2px yellow;
-  font: 50px;
+ 
+  border: 2px rgb(13, 14, 13) solid;
+  background-color: #f0f0f0bd;
+  padding: 5px;
+  border-radius: 15px;
+  width: 90%;
+  margin: auto;
+
   color: blueviolet;
   grid-area: nav;
  
