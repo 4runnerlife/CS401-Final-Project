@@ -8,7 +8,7 @@ block content
   ul.list
     p.topBlog Blogs
     each value in data 
-      li= value.blog_txt 
+      ul= value.blog_txt 
   br
   .article 
     form(action='/add', method='POST')
@@ -34,5 +34,5 @@ block content
   div.test hey there 
     ul
       each value in data 
-        li= value.blog_body  
+        ul= value.blog_body  
     br

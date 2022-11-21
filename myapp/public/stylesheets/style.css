@@ -2,7 +2,7 @@ body {
   display: grid;
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: darkseagreen;
+  background-color: rgb(20, 11, 145);
    grid-template-columns: 20% auto auto;
    grid-template-rows: 100px 480px 200px;
    grid-template-areas: 
@@ -12,7 +12,7 @@ body {
 }
 h1{
   text-align: center;
-  border: solid 2px red;
+  border: solid 2px red; 
   font: 50pt;
   background-color: #f0f0f0bd;
   padding: 5px;
