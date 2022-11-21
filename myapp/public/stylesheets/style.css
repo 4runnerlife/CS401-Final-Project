@@ -14,6 +14,9 @@ h1{
   text-align: center;
   border: solid 2px red;
   font: 50pt;
+  background-color: #f0f0f0bd;
+  padding: 5px;
+  border-radius: 15px;
   grid-area: head;
 }
 .topBlog{
@@ -23,7 +26,7 @@ h1{
 }
 .list{
  
-  border: 2px rgb(13, 14, 13) solid;
+  border: 2px rgb(182, 166, 23) solid;
   background-color: #f0f0f0bd;
   padding: 5px;
   border-radius: 15px;
@@ -38,6 +41,9 @@ a {
 .article{
   border: solid 2px black;
   font: 50px;
+  background-color: #f0f0f0bd;
+  padding: 5px;
+  border-radius: 15px;
   grid-area: foot;
   
 }
@@ -45,6 +51,9 @@ a {
   border: solid 2px blue;
   font: 50pt;
   color: darkgreen;
+  background-color: #f0f0f0bd;
+  padding: 5px;
+  border-radius: 15px;
   grid-area: article;
   
 }
