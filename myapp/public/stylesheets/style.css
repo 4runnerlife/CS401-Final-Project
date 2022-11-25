@@ -4,7 +4,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(20, 11, 145);
    grid-template-columns: 20% auto auto;
-   grid-template-rows: 100px 480px 200px;
+   grid-template-rows: 100px 480px 300px;
    grid-template-areas: 
       "head head head"
       "nav article article"
@@ -44,9 +44,20 @@ a {
   background-color: #f0f0f0bd;
   padding: 5px;
   border-radius: 15px;
+  display: inline-grid;
   grid-area: foot;
-  
 }
+ /* .article-middle{
+  
+  border-radius: 15px;
+  text-align: center;
+  grid-area: foot;
+}
+.article-right{
+  
+  border-radius: 15px;
+  grid-area: foot; 
+} */
 .test{
   border: solid 2px blue;
   font: 50pt;

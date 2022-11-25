@@ -12,24 +12,28 @@ block content
   br
   .article 
     form(action='/add', method='POST')
-      input(type='text', name='blog_txt', value="")
-      input(type='text', name='blog_body', value="")
+      input(type='text', name='blog_txt', value="") 
+      br
+      br
+      textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
+      br
       button(type='submit')
-        p New
+        p Add New Blog
     form(action='/delete', method='POST')
       input(type='text', name='blog_id', value="")
       button(type='submit')
-        p Delete
+        p Delete a Blog
+      br
+      br
     form(action='/edit', method='POST')
       input(type='text', name='blog_id', value="")
-      //input(type='text', name='blog_body', value="")
+      br
+      br
+      textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
+      br
       button(type='submit')
-        p Edit
-    form(action='/update', method='POST')
-      input(type='text', name='blog_id', value="")
-      //input(type='text', name='blog_body', value="")
-      button(type='submit')
-        p Update 
+        p Edit/Update the Blog
+   
 
   div.test hey there 
     ul
