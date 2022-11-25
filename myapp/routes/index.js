@@ -105,7 +105,7 @@ router.post('/update', (req, res, next) => {
       }
       console.log("updated " + req.body.blog_id);
  
-      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`); 
+      db.exec(`update blog set blog_body = 'hey you' where blog_id='${req.body.blog_id}';`); 
       
       res.redirect('/');
     }
