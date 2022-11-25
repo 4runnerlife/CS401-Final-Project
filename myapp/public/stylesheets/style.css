@@ -8,7 +8,7 @@ body {
    grid-template-areas: 
       "head head head"
       "nav article article"
-      "foot foot foot"; 
+      "nav foot foot"; 
 }
 h1{
   text-align: center;
@@ -46,18 +46,26 @@ a {
   border-radius: 15px;
   display: inline-grid;
   grid-area: foot;
-}
- /* .article-middle{
   
-  border-radius: 15px;
-  text-align: center;
-  grid-area: foot;
+}
+.article-left{
+  border: 2px rgb(182, 166, 23) solid;
+  grid-column: 1/4;
+  grid-row: 1/4;
+  width: 25%;
+}
+.article-middle{
+  border: 2px rgb(23, 182, 57) solid;
+  width: 30%;
+  grid-row: 1/4;
+  grid-column: 2/4;
 }
 .article-right{
-  
-  border-radius: 15px;
-  grid-area: foot; 
-} */
+  border: 2px rgb(230, 24, 219) solid;
+  grid-row: 2/4;
+  grid-column: 3/4;
+  width: 30%;
+}
 .test{
   border: solid 2px blue;
   font: 50pt;

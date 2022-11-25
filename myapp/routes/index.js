@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
             console.log("Table exists!");
             db.all(` select blog_id, blog_txt, blog_body from blog`, (err, rows) => {
               console.log("returning " + rows.length + " records");
-              res.render('index', { title: 'Hello world', data: rows });
+              res.render('index', { title: 'Welcome to the Blog', data: rows });
             });
           } else {
             console.log("Creating table and inserting some sample data");
@@ -32,7 +32,7 @@ router.get('/', function (req, res, next) {
                              ('Oh my goodness blogging is fun', 'blog_body 3');`,
               () => {
                 db.all(` select blog_id, blog_txt, blog_body from blog`, (err, rows) => {
-                  res.render('index', { title: 'Hello world', data: rows });
+                  res.render('index', { title: 'Welcome to the Blog', data: rows });
                 });
               });
           }

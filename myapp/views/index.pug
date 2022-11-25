@@ -10,29 +10,33 @@ block content
     each value in data 
       ul= value.blog_txt 
   br
-  .article 
-    form(action='/add', method='POST')
-      input(type='text', name='blog_txt', value="") 
-      br
-      br
-      textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
-      br
-      button(type='submit')
-        p Add New Blog
-    form(action='/delete', method='POST')
-      input(type='text', name='blog_id', value="")
-      button(type='submit')
-        p Delete a Blog
-      br
-      br
-    form(action='/edit', method='POST')
-      input(type='text', name='blog_id', value="")
-      br
-      br
-      textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
-      br
-      button(type='submit')
-        p Edit/Update the Blog
+  table
+  .article
+    .article-left
+      form(action='/add', method='POST')
+        input(type='text', name='blog_txt', value="") 
+        br
+        br
+        textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
+        br
+        button(type='submit')
+          p Add New Blog
+    .article-right
+      form(action='/delete', method='POST')
+        input(type='text', name='blog_id', value="")
+        button(type='submit')
+          p Delete a Blog
+        
+        
+    .article-middle
+      form(action='/edit', method='POST')
+        input(type='text', name='blog_id', value="")
+        br
+        br
+        textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
+        br
+        button(type='submit')
+          p Edit/Update the Blog
    
 
   div.test hey there 
