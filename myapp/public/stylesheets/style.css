@@ -3,12 +3,12 @@ body {
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(20, 11, 145);
-   grid-template-columns: 20% auto auto;
-   grid-template-rows: 17% 72% 72%;
+   grid-template-columns: auto auto auto;
+   grid-template-rows: 5% 50% 25%;
    grid-template-areas: 
       "head head head"
-      "nav article article"
-      "nav foot foot"; 
+      "article article article"
+      "foot foot foot"; 
 }
 h1{
   text-align: center;
@@ -22,21 +22,15 @@ h1{
 .topBlog{
   border: 2px rgb(253, 4, 4) solid;
   background-color: #04AA6D;
-  width: 50%;
+  width: 20%;
   color: white;
-}
-.list{
- 
-  border: 2px rgb(182, 166, 23) solid;
-  background-color: #f0f0f0bd;
-  padding: 5px;
-  border-radius: 15px;
-  width: 90%;
-  color: blueviolet;
-  grid-area: nav;
-  
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
  
 }
+
 
 .article{
   border: solid 2px black;
@@ -71,9 +65,14 @@ h1{
   font: 50pt;
   color: rgb(0, 0, 0);
   background-color: #f0f0f0bd;
-  padding: 5px;
+  padding: 20px;
   border-radius: 15px;
   grid-area: article;
+  overflow: auto;
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+  
   
 }
 .tester{
@@ -82,6 +81,14 @@ h1{
   color: rgb(0, 0, 0);
   background-color: #f0f0f0bd;
   padding: 5px;
+  margin: 20px;
   border-radius: 15px;
   grid-area: article;
+  overflow: auto;
+  
+}
+.title{
+  font: 50pt;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
 }

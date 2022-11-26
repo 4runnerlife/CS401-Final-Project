@@ -3,20 +3,8 @@ extends layout
 block content
   
   h1= title
-  //p.list  Welcome to the final lab
+ 
   
-  ul.list
-    p.topBlog Current list of Blogs 
-    each value in data
-      .tester
-        - let helper = value.blog_txt
-        - let helper2 = value.blog_body
-        br
-       
-        p !{helper}
-        p !{helper2}
-  
-
   br
   table
   .article
@@ -50,11 +38,19 @@ block content
    
 
   .test 
-    p hello
-
-  script
-    function tester()
-      console.log('hey')            
+    ul
+    p.topBlog Current list of Blogs 
+    each value in data
+      .tester
+        - let helper = value.blog_txt
+        - let helper2 = value.blog_body
+        br
+        p.title Title
+        p !{helper}
+        p.title Body
+        p !{helper2}
+        
+        br      
   
     
 
