@@ -10,7 +10,7 @@ block content
     each value in data
       - let helper = value.blog_txt
       br
-      button(type='button', onclick="myFunction()")
+      button(type='button')
         p !{helper}
   br
   table
@@ -33,9 +33,9 @@ block content
         
     .article-middle
       form(action='/edit', method='POST')
-        p Old Title
-        input(type='text', name='blog_txt', value="")
-        p New Title
+        p ID
+        input(type='text', name='blog_id', value="")
+        p Title
         input(type='text', name='blog_txt', value="")
         p Blog
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
