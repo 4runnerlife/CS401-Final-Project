@@ -86,9 +86,9 @@ router.post('/edit', (req, res, next) => {
         exit(1);
       }
       console.log("edited " + req.body.blog_id);
- 
-      db.exec(`update blog set blog_body = 'what up' where blog_id='${req.body.blog_id}';`); 
-      
+      console.log("here")
+      db.exec(`update blog set blog_body = '${req.body.blog_body}' where blog_id='${req.body.blog_id}';`); 
+      console.log("here pt2")
       res.redirect('/');
     }
   );

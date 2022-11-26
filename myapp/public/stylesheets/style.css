@@ -4,7 +4,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(20, 11, 145);
    grid-template-columns: 20% auto auto;
-   grid-template-rows: 100px 480px 300px;
+   grid-template-rows: 17% 72% 72%;
    grid-template-areas: 
       "head head head"
       "nav article article"
@@ -20,6 +20,7 @@ h1{
   grid-area: head;
 }
 .topBlog{
+  border: 2px rgb(253, 4, 4) solid;
   background-color: #04AA6D;
   width: 50%;
   color: white;
@@ -33,6 +34,7 @@ h1{
   width: 90%;
   color: blueviolet;
   grid-area: nav;
+  
  
 }
 a {
@@ -62,14 +64,14 @@ a {
 }
 .article-right{
   border: 2px rgb(230, 24, 219) solid;
-  grid-row: 2/4;
+  grid-row: 1/4;
   grid-column: 3/4;
   width: 30%;
 }
 .test{
   border: solid 2px blue;
   font: 50pt;
-  color: darkgreen;
+  color: rgb(0, 0, 0);
   background-color: #f0f0f0bd;
   padding: 5px;
   border-radius: 15px;

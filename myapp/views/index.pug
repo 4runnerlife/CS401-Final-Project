@@ -6,17 +6,20 @@ block content
   //p.list  Welcome to the final lab
   
   ul.list
-    p.topBlog Blogs
-    each value in data 
-      ul= value.blog_txt 
+    p.topBlog Current list of Blogs 
+    each value in data
+      - let helper = value.blog_txt
+      br
+      button(type='button', onclick="myFunction()")
+        p !{helper}
   br
   table
   .article
     .article-left
       form(action='/add', method='POST')
+        p Title
         input(type='text', name='blog_txt', value="") 
-        br
-        br
+        p Blog 
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
         br
         button(type='submit')
@@ -30,17 +33,17 @@ block content
         
     .article-middle
       form(action='/edit', method='POST')
-        input(type='text', name='blog_id', value="")
-        br
-        br
+        p Old Title
+        input(type='text', name='blog_txt', value="")
+        p New Title
+        input(type='text', name='blog_txt', value="")
+        p Blog
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
         br
         button(type='submit')
           p Edit/Update the Blog
    
 
-  div.test hey there 
-    ul
-      each value in data 
-        ul= value.blog_body  
-    br
+  .test 
+    p hello
+    
