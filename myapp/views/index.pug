@@ -8,10 +8,15 @@ block content
   ul.list
     p.topBlog Current list of Blogs 
     each value in data
-      - let helper = value.blog_txt
-      br
-      button(type='button')
+      .tester
+        - let helper = value.blog_txt
+        - let helper2 = value.blog_body
+        br
+       
         p !{helper}
+        p !{helper2}
+  
+
   br
   table
   .article
@@ -46,4 +51,10 @@ block content
 
   .test 
     p hello
+
+  script
+    function tester()
+      console.log('hey')            
+  
     
+

@@ -76,3 +76,12 @@ h1{
   grid-area: article;
   
 }
+.tester{
+  border: solid 2px rgb(0, 255, 42);
+  font: 50pt;
+  color: rgb(0, 0, 0);
+  background-color: #f0f0f0bd;
+  padding: 5px;
+  border-radius: 15px;
+  grid-area: article;
+}
