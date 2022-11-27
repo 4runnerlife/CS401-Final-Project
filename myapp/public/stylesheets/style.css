@@ -4,7 +4,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(20, 11, 145);
    grid-template-columns: auto auto auto;
-   grid-template-rows: 5% 50% 25%;
+   grid-template-rows: auto 50% auto;
    grid-template-areas: 
       "head head head"
       "article article article"
@@ -40,25 +40,32 @@ h1{
   border-radius: 15px;
   display: inline-grid;
   grid-area: foot;
+  width: 70%;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 .article-left{
   border: 2px rgb(182, 166, 23) solid;
-  grid-column: 1/4;
+  
   grid-row: 1/4;
-  width: 25%;
+ 
+  box-shadow: 5px 5px;
 }
 .article-middle{
   border: 2px rgb(23, 182, 57) solid;
-  width: 30%;
+
   grid-row: 1/4;
-  grid-column: 2/4;
+  
+  box-shadow: 5px 5px;
 }
 .article-right{
   border: 2px rgb(230, 24, 219) solid;
   grid-row: 1/4;
-  grid-column: 3/4;
-  width: 30%;
+  
+  
+  box-shadow: 5px 5px;
 }
 .test{
   border: solid 2px blue;
@@ -85,6 +92,7 @@ h1{
   border-radius: 15px;
   grid-area: article;
   overflow: auto;
+  box-shadow: 5px 5px;
   
 }
 .title{
