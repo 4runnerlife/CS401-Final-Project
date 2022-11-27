@@ -17,21 +17,23 @@ router.get('/', function (req, res, next) {
         (err, rows) => {
           if (rows.length === 1) {
             console.log("Table exists!");
-            db.all(` select blog_id, blog_txt, blog_body from blog`, (err, rows) => {
+            db.all(` select blog_id, blog_txt, blog_body, blog_date from blog`, (err, rows) => {
               console.log("returning " + rows.length + " records");
               res.render('index', { title: 'Welcome to the Blog', data: rows });
             });
           } else {
+            
             console.log("Creating table and inserting some sample data");
             db.exec(`create table blog (
                      blog_id INTEGER PRIMARY KEY AUTOINCREMENT,
                      blog_txt text NOT NULL,
-                     blog_body text NOT NULL);
+                     blog_body text NOT NULL,
+                     blog_date blog_date DATE DEFAULT CURRENT_DATE);
                       insert into blog (blog_txt, blog_body)
                       values ('This is a great blog', 'blog_body 1'),
                              ('Oh my goodness blogging is fun', 'blog_body 3');`,
               () => {
-                db.all(` select blog_id, blog_txt, blog_body from blog`, (err, rows) => {
+                db.all(` select blog_id, blog_txt, blog_body, blog_date from blog`, (err, rows) => {
                   res.render('index', { title: 'Welcome to the Blog', data: rows });
                 });
               });

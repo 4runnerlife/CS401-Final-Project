@@ -45,9 +45,12 @@ block content
       .tester
         - let helper = value.blog_txt
         - let helper2 = value.blog_body
+        -let helper3 = value.blog_date
         br
         p.title Title
-        p !{helper}
+        p !{helper} 
+        p.title Date 
+        p !{helper3}
         p.title Body
         p !{helper2}
         br      
