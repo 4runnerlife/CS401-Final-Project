@@ -62,7 +62,7 @@ h1{
   border-radius: 15px;
 }
 
-.test{
+.blogDiv{
   border: solid 2px blue;
   font: 50pt;
   color: rgb(0, 0, 0);
@@ -76,7 +76,7 @@ h1{
   margin-right: auto;
 }
 
-.tester{
+.listOfBlogs{
   border: solid 2px rgb(0, 0, 0);
   font: 50pt;
   color: rgb(0, 0, 0);
@@ -87,15 +87,19 @@ h1{
   grid-area: article;
   overflow: auto;
   box-shadow: 5px 5px;
+  opacity: 0.8;
+}
+.listOfBlogs:hover{
+  opacity: 1
 }
 
-.title1{
+.dateAndNumber{
   font: 50pt;
   color:rgb(0, 0, 0);
   font-weight: bold;
 }
 
-.title{
+.titleOfBlog{
   font: 50pt;
   color:rgb(0, 0, 0);
   font-weight: bold;
@@ -104,7 +108,7 @@ h1{
   margin: auto;
 }
 
-.title:after {
+.titleOfBlog:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -117,7 +121,7 @@ h1{
   transition: transform 0.25s ease-out;
 }
 
-.title:hover:after{
+.titleOfBlog:hover:after{
   transform:scaleX(1);
   transform-origin: bottom left;
 }

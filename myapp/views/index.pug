@@ -50,19 +50,18 @@ block content
         .textBoxHeaders 
           button.btn(type='submit')
             p Delete a Blog
-  .test 
+  .blogDiv
     ul
-    
     each value in data
-      .tester
+      .listOfBlogs
         - let helper = value.blog_txt
         - let helper2 = value.blog_body
         - let helper3 = value.blog_date
         - let helper4 = value.blog_id
         br
-        p.title1 Blog Number: !{helper4}
-        p.title Title: !{helper}
-        p.title1 Date: !{helper3} 
+        p.dateAndNumber Blog Number: !{helper4}
+        p.titleOfBlog Title: !{helper}
+        p.dateAndNumber Date: !{helper3} 
         p !{helper2}
         br      
   
