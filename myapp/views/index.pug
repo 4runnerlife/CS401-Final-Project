@@ -3,7 +3,8 @@ extends layout
 block content
   
   h1= title
- 
+    br
+    p Feel free to add something interesting 
   
   br
   table
@@ -22,15 +23,15 @@ block content
         
     .article-middle
       form(action='/edit', method='POST')
-        p ID
+        p Blog Number
         input(type='text', name='blog_id', value="")
-        p Title
+        p New Title
         input(type='text', name='blog_txt', value="")
         p Blog
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
         br
         button(type='submit')
-          p Edit/Update the Blog
+          p Edit/Update a Blog
    
     .article-right
       form(action='/delete', method='POST')
@@ -40,18 +41,18 @@ block content
           p Delete a Blog
   .test 
     ul
-    p.topBlog Current list of Blogs 
+    
     each value in data
       .tester
         - let helper = value.blog_txt
         - let helper2 = value.blog_body
         -let helper3 = value.blog_date
+        -let helper4 = value.blog_id
         br
-        p.title Title
-        p !{helper} 
-        p.title Date 
-        p !{helper3}
-        p.title Body
+        p.title1 Blog Number: !{helper4}
+        p.title Title: !{helper}
+        p.title1 Date: !{helper3} 
+        p.title1 Body
         p !{helper2}
         br      
   

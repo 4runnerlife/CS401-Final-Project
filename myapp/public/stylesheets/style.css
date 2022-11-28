@@ -2,7 +2,10 @@ body {
   display: grid;
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(20, 11, 145);
+  background-color: aqua;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
    grid-template-columns: auto auto auto;
    grid-template-rows: auto 50% auto;
    grid-template-areas: 
@@ -14,28 +17,16 @@ h1{
   text-align: center;
   border: solid 2px red; 
   font: 50pt;
-  background-color: #f0f0f0bd;
+  background-color: #f0f0f000;
   padding: 5px;
   border-radius: 15px;
   grid-area: head;
 }
-.topBlog{
-  border: 2px rgb(253, 4, 4) solid;
-  background-color: #04AA6D;
-  width: 20%;
-  color: white;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
- 
-}
-
 
 .article{
   border: solid 2px black;
   font: 50px;
-  background-color: #f0f0f0bd;
+  background-color: #f0f0f000;
   padding: 5px;
   border-radius: 15px;
   display: inline-grid;
@@ -44,34 +35,37 @@ h1{
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  
 }
+
 .article-left{
   border: 2px rgb(182, 166, 23) solid;
-  
+  background-color: #f0f0f0bd;
   grid-row: 1/4;
- 
   box-shadow: 5px 5px;
+  border-radius: 15px;
 }
+
 .article-middle{
   border: 2px rgb(23, 182, 57) solid;
-
+  background-color: #f0f0f0bd;
   grid-row: 1/4;
-  
   box-shadow: 5px 5px;
+  border-radius: 15px;
 }
+
 .article-right{
   border: 2px rgb(230, 24, 219) solid;
+  background-color: #f0f0f0bd;
   grid-row: 1/4;
-  
-  
   box-shadow: 5px 5px;
+  border-radius: 15px;
 }
+
 .test{
   border: solid 2px blue;
   font: 50pt;
   color: rgb(0, 0, 0);
-  background-color: #f0f0f0bd;
+  background-color: #f0f0f000;
   padding: 20px;
   border-radius: 15px;
   grid-area: article;
@@ -79,24 +73,50 @@ h1{
   width: 99%;
   margin-left: auto;
   margin-right: auto;
-  
-  
 }
+
 .tester{
   border: solid 2px rgb(0, 255, 42);
   font: 50pt;
   color: rgb(0, 0, 0);
-  background-color: #f0f0f0bd;
+  background-color: #f0f0f0;
   padding: 5px;
   margin: 20px;
   border-radius: 15px;
   grid-area: article;
   overflow: auto;
   box-shadow: 5px 5px;
-  
 }
+
+.title1{
+  font: 50pt;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+}
+
 .title{
   font: 50pt;
   color:rgb(0, 0, 0);
   font-weight: bold;
+  display:inline-block;
+  position: relative;
+  margin: auto;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background:linear-gradient(45deg,yellow, green, blue); 
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.title:hover:after{
+  transform:scaleX(1);
+  transform-origin: bottom left;
 }
