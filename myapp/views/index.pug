@@ -11,34 +11,45 @@ block content
   .article
     .article-left
       form(action='/add', method='POST')
-        p Title
-        input(type='text', name='blog_txt', value="") 
-        p Blog 
+        br
+        br
+        p.textBoxHeaders Title
+        .textBoxHeaders
+          input(type='text', name='blog_txt', value="") 
+        p.textBoxHeaders Blog 
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
         br
-        button(type='submit')
-          p Add New Blog
+        .textBoxHeaders 
+          button.btn(type='submit')
+            p Add New Blog
     
         
         
     .article-middle
       form(action='/edit', method='POST')
-        p Blog Number
-        input(type='text', name='blog_id', value="")
-        p New Title
-        input(type='text', name='blog_txt', value="")
-        p Blog
+        p.textBoxHeaders Blog Number
+        .textBoxHeaders
+          input(type='text', name='blog_id', value="")
+        p.textBoxHeaders New Title
+        .textBoxHeaders
+          input(type='text', name='blog_txt', value="")
+        p.textBoxHeaders Blog
         textarea(type='text', name='blog_body', maxlength="300", tabindex="100", rows="10", cols="30",value="")
         br
-        button(type='submit')
-          p Edit/Update a Blog
+        .textBoxHeaders
+          button.btn(type='submit')
+            p Edit/Update a Blog
    
     .article-right
       form(action='/delete', method='POST')
-        input(type='text', name='blog_id', value="")
+        .textBoxHeaders
+          p.textBoxHeaders Blog Number 
+          input(type='text', name='blog_id', value="")
         br
-        button(type='submit')
-          p Delete a Blog
+        br
+        .textBoxHeaders 
+          button.btn(type='submit')
+            p Delete a Blog
   .test 
     ul
     

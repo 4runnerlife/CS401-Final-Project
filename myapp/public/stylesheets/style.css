@@ -57,6 +57,7 @@ h1{
   border: 2px rgb(230, 24, 219) solid;
   background-color: #f0f0f0bd;
   grid-row: 1/4;
+  width: 125%;
   box-shadow: 5px 5px;
   border-radius: 15px;
 }
@@ -120,3 +121,23 @@ h1{
   transform:scaleX(1);
   transform-origin: bottom left;
 }
+
+.textBoxHeaders{
+  text-align: center;
+}
+
+.btn{
+  background-color: #3b0ba8;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  opacity: 1
+}
+
