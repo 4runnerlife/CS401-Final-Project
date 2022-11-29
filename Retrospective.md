@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Matt Rockenhaus
+- email: matthewrockenhaus@u.boisestate.edu
 
 ## Instructions
 
@@ -21,12 +21,13 @@ Be safe CITE!
 
 ## Experience
 
-TODO
+This was a lot of fun!  I really enjoyed being able to build a website.  I did have some issues with calling functions.
+I was never able to get some of the functions I wanted to work so I ended up making some last minute changes.
 
 ## Known issues or Bugs
 
-TODO
+none
 
 ## Sources used
 
-TODO
+zybooks
