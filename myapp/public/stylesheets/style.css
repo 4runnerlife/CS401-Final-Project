@@ -2,10 +2,7 @@ body {
   display: grid;
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: aqua;
-  background-image: url();
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-color: #e71809af;
    grid-template-columns: auto auto auto;
    grid-template-rows: auto 50% auto;
    grid-template-areas: 
@@ -14,8 +11,7 @@ body {
       "foot foot foot"; 
 }
 h1{
-  text-align: center;
-  border: solid 2px red; 
+  text-align: center; 
   font: 50pt;
   background-color: #f0f0f000;
   padding: 5px;
@@ -24,7 +20,6 @@ h1{
 }
 
 .article{
-  border: solid 2px black;
   font: 50px;
   background-color: #f0f0f000;
   padding: 5px;
@@ -63,7 +58,6 @@ h1{
 }
 
 .blogDiv{
-  border: solid 2px blue;
   font: 50pt;
   color: rgb(0, 0, 0);
   background-color: #f0f0f000;
@@ -131,13 +125,13 @@ h1{
 }
 
 .btn{
-  background-color: #3b0ba8;
+  background-color: #220ba8;
   border: none;
   color: white;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  opacity: 0.6;
+  opacity: 0.4;
   transition: 0.5s;
 }
 
